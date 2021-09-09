@@ -1,0 +1,160 @@
+@import url(./reset.css);
+
+
+:root{
+    --lightblue: #d6ebf8;
+    --blue: #3498DB;
+    --darkblue: #052e5e;
+    --lightcolor: #fff;
+    --gray: #969ba0;
+    --lightgray: #c8ccd0;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--colorBlueDark);
+    background: var(--colorWhite);
+    text-align: left;
+    line-height: 1.5;
+  }
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    font-family: roboto;
+    cursor: pointer;
+    background-color: var(--lightblue);
+    border-radius: 1.5rem;
+}
+form label {
+    display: flex;
+    padding-top: 1rem;
+    font-family: roboto;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="date"] {
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.8rem;
+}
+.forth-input{
+  display: flex;
+  flex-direction: row;
+}
+form .input-gender1{
+  background-color: var(--lightcolor);
+  font-family: roboto;
+  font-size: 1.25rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.8rem;
+  width: 30%;
+}
+form .input-gender2 {
+  font-size: 1.2rem;
+  font-family: roboto;
+  background-color: var(--lightcolor);
+  padding: 0.8rem;
+  margin: 1rem;
+  border-radius: 0.8rem;
+  width: 31%;
+}
+form .radio {
+    background-color: var(--lightcolor);
+    padding: 1rem 1rem;
+    font-size: 2rem;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.container:hover input ~ .checkmark {
+  background-color: var(--lightgray);
+  border-radius: 0.5rem;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container input:checked ~ .checkmark {
+  background-color: var(--lightgray);
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+form .terms {
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    font-size: 1rem;
+}
+form .account-btn > input {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 3.5rem;
+  font-family: roboto;
+  text-decoration: none;
+  border-bottom: 0.5rem solid steelblue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: linear-gradient(#5FDDFF,#53ADDF);
+  color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0.05px 0.6px grey;
+  transition: 150ms ease;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1024px) {
+  main { 
+    font-size: 2rem;
+    padding: 5rem;
+    max-width: 90%;
+  }
+}
+
+
